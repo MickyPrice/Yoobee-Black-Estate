@@ -1,0 +1,97 @@
+.nav { // Main nav wrapper
+    background-color: #FFF;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__logo { // Logo
+        width: 100px;
+    }
+
+    &__left { // The left side of the nav (Logo & Toggle btn)
+        display: flex;
+        justify-content: space-between;
+        @include mobile-breakpoint {
+            width: 100%;
+        }
+    }
+
+    &__right { // Right side of nav (Links)
+        display: block;
+        @include mobile-breakpoint {
+            display: none;
+        }
+    }
+
+    &__right--shown { // For mobile toggling
+        display: block;
+    }
+
+    &__right > * { // Make all items in right nav vertically centered
+        vertical-align: middle;
+     }
+
+     &__link { // All links in nav
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 0 5px;
+        display: inline-block;
+        @include mobile-breakpoint {
+            display: block;
+            padding: 5px;
+        }
+    }
+
+    &__cart_btn { // Add to cart btn
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__nav_toggler { // The 3 bars shown on mobile to toggle nav
+        background: none;
+        border: none;
+        display: none;
+        cursor: pointer;
+        @include mobile-breakpoint {
+            display: block;
+        }
+    }
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &__content {
+        display: none;
+        position: absolute;
+        border-radius: 3px;
+        background-color: #FFF;
+        min-width: 160px;
+        box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    &:hover .dropdown__content {
+        display: block;
+    }
+
+    &__link {
+        color: $dark;
+        margin: 10px 0;
+        display: block;
+        text-decoration: none;
+    }
+
+}
+  
+
+
+
+

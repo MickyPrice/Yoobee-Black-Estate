@@ -1,0 +1,71 @@
+.booking-form {
+    padding: 50px;
+    background-color: $gray;
+    width: 50%;
+    margin: 5px;
+
+    @include mobile-breakpoint {
+        width: 100%;
+    }
+
+
+    &__heading {
+        font-size: 36px;
+        font-family: $font2;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &__subheading {
+        font-size: 24px;
+        font-family: $font2;
+        text-align: center;
+    }
+
+    &__paragraph {
+        text-align: center;
+        margin-top: 20px;
+        font-family: $font1;
+    }
+
+    &__input-wrap {
+        padding: 10px;
+    }
+
+    &__label {
+        display: block;
+        font-family: $font2;
+    }
+
+    &__input {
+        display: block;
+        border: none;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        padding: 15px;
+        font-family: $font2;
+        transition: background-color 0.5s;
+    }
+
+
+    &__errors {
+        color: red;
+        padding: 15px;
+    }
+
+    &__submit {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        color: #FFF;
+        background-color: $dark;
+        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+
+
+    abbr {
+        text-decoration: none;
+    }
+}

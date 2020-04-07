@@ -1,0 +1,8 @@
+.restaurant-section1 {
+    display: flex;
+    padding: 5px;
+
+    @include mobile-breakpoint {
+        display: block;
+    }
+}

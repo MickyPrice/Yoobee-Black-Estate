@@ -1,0 +1,63 @@
+.home_header { // The header wrapper
+    display: flex;
+    padding: 0 5px;
+    @include mobile_breakpoint {
+        display: block;
+    }
+
+    &__button { // The actual large clickable buttons
+        width: 50%;
+        display: block;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0 5px;
+        color: #FFF;
+        text-decoration: none;
+    
+        @include mobile_breakpoint {
+            width: auto;
+            margin: 10px 5px; 
+        }
+    }
+
+    &__background { // The transparent black overlay
+        padding: 250px 0;
+        background-color: rgba(0,0,0,0.5);
+        transition: background-color 0.4s;
+        @include mobile_breakpoint {
+          padding: 80px 10px;
+        }
+    }
+
+    // Make header buttons that don't have the --no_hover modifier change colour on hover.
+    &__button:not(&__button--no_hover):hover &__background {
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    &__title { // Header Titles
+        font-weight: 100;
+        font-size: 32px;
+        font-family: $font2;
+        @include mobile_breakpoint {
+            font-size: 28px;
+        }
+    }
+
+    &__restaurant { // Restaurant BG
+        background-image: url('../../dist/img/photography/restaurant1.jpeg');
+    }
+
+    &__wine_tours { // Winery Tours BG
+        background-image: url('../../dist/img/photography/wine_tasting.jpeg');
+    }
+
+    &__mobile_header { // Mobile Header BG
+        display: none;
+        background-image: url('../../dist/img/photography/black_estate_home.jpg');
+        @include mobile_breakpoint {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.gallery {
+    margin: 5px 5px 10px 5px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    // Title
+    &__header {
+        padding: 5px;
+    }
+
+    &__title {
+        line-height: 0.5;
+        text-align: center;
+    }
+
+    &__title h2 {
+        display: inline-block;
+        position: relative;  
+        font-size: 32px;
+        font-family: $font1;
+    }
+
+    &__title h2:before,
+    &__title h2:after {
+        content: "";
+        position: absolute;
+        height: 0px;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        top: 5px;
+        width: 600px;
+    }
+
+    &__title h2:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    &__title h2:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        font-weight: 300;
+        font-family: $font2;
+        margin: 10px 0px;
+    }
+
+
+
+    // Image gallery
+    &__image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__images {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+
+
+
+
+    &__image-wrapper {
+        width: 20%;
+        border: 5px solid #FFF;
+        @include mobile_breakpoint {
+            width: 100%;
+        }
+    }
+}

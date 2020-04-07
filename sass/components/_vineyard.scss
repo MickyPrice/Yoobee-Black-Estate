@@ -1,0 +1,51 @@
+.vineyard {
+    display: flex;
+    padding: 5px;
+
+    @include mobile-breakpoint {
+        display: block;
+    }
+
+    &__block {
+        text-align: center;
+        color: #FFF;
+        display: block;
+        flex: 1;
+        margin: 5px;
+        position: relative;
+        text-decoration: none;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include mobile-breakpoint {
+            position: static;
+            top: inherit;
+            transform: none;
+            padding: 40px 10px;
+        }
+    }
+
+    &__heading {
+        font-family: $font2;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    &__bg {
+        background-color: rgba(0,0,0,0.5);
+        transition: background-color 0.4s;
+    }
+
+    &__block:hover &__bg {
+        background-color: rgba(0,0,0,0.3);
+    }
+}

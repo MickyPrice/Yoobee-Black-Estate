@@ -1,0 +1,29 @@
+.footer {
+    background-color: $dark;
+    padding: 40px;
+
+    &__link {
+        color: #FFF;
+        text-decoration: none;
+        padding: 0 10px 0 0;
+        @include mobile-breakpoint {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link:hover {
+        color: #FFF;
+        opacity: 0.8;
+    }
+
+    &__underlined {
+        text-decoration: underline;
+    }
+
+    &__extra {
+        font-style: italic;
+        color: #FFF;
+        margin-top: 10px;
+    }
+}

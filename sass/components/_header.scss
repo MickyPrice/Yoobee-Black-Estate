@@ -1,0 +1,30 @@
+.header {
+    padding: 10px 10px 0px 10px;
+    
+    &__bg {
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+
+        @include mobile-breakpoint {
+            height: inherit;
+        }
+    }
+
+    &__darken_bg {
+        display: none;
+        padding: 100px;
+        background-color: rgba(0,0,0,0.5);
+        text-align: center;
+        @include mobile-breakpoint {
+            display: block;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        font-size: 48px;
+        font-weight: 300;
+        font-family: $font1;
+    }
+}

@@ -1,0 +1,57 @@
+.sidebyside {
+    display: flex;
+    padding: 0 10px;
+    @include mobile-breakpoint {
+        flex-direction: column;
+    }
+
+    &--mobile_flip {
+        @include mobile-breakpoint {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__sec {
+        width: 50%;
+        @include mobile-breakpoint {
+            width: auto;
+        }
+    }
+
+    &__text {
+        padding: calc(100vw * 0.08) calc(100vw * 0.04);
+    }
+
+    &__heading {
+        font-size: 48px;
+        font-family: $font2;
+        font-weight: 300;
+        margin-bottom: 10px;
+        @include mobile-breakpoint {
+            font-size: 32px;
+            font-weight: 600;
+        }
+    }
+
+    &__paragraph {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    &__background {
+        background-position: center;
+        background-size: cover;
+        @include mobile-breakpoint {
+            min-height: 300px;
+        }
+    }
+
+    &__link {
+        color: $dark;
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+}
+
