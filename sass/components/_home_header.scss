@@ -46,16 +46,16 @@
     }
 
     &__restaurant { // Restaurant BG
-        background-image: url('../../dist/img/photography/restaurant1.jpeg');
+        background-image: url('../img/photography/restaurant1.jpeg');
     }
 
     &__wine_tours { // Winery Tours BG
-        background-image: url('../../dist/img/photography/wine_tasting.jpeg');
+        background-image: url('../img/photography/wine_tasting.jpeg');
     }
 
     &__mobile_header { // Mobile Header BG
         display: none;
-        background-image: url('../../dist/img/photography/black_estate_home.jpg');
+        background-image: url('../img/photography/black_estate_home.jpg');
         @include mobile_breakpoint {
             display: block;
         }
