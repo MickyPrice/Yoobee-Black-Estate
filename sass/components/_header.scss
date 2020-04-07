@@ -13,7 +13,7 @@
 
     &__darken_bg {
         display: none;
-        padding: 100px;
+        padding: 100px 0;
         background-color: rgba(0,0,0,0.5);
         text-align: center;
         @include mobile-breakpoint {
