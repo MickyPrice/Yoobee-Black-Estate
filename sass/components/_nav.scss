@@ -63,7 +63,7 @@
 
 
 
-.dropdown {
+.dropdown { // The dropdown in the nav
     position: relative;
     display: inline-block;
 
@@ -78,7 +78,7 @@
         z-index: 1;
     }
 
-    &:hover .dropdown__content {
+    &:hover .dropdown__content { // Make the dropdown show on hover
         display: block;
     }
 

@@ -1,12 +1,12 @@
-.vineyard {
+.vineyard { // The 3 vineyard cards at bottom of home page
     display: flex;
     padding: 5px;
 
     @include mobile-breakpoint {
         display: block;
     }
-
-    &__block {
+ 
+    &__block { // A single card
         text-align: center;
         color: #FFF;
         display: block;
@@ -18,13 +18,13 @@
         background-size: cover;
     }
 
-    &__center {
+    &__center { // Centers the text inside a card
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include mobile-breakpoint {
+        @include mobile-breakpoint { // Set the text back to normal on mobile
             position: static;
             top: inherit;
             transform: none;
@@ -32,7 +32,7 @@
         }
     }
 
-    &__heading {
+    &__heading { // The title in the card
         font-family: $font2;
         font-style: normal;
         font-weight: normal;
@@ -40,12 +40,12 @@
         line-height: 32px;
     }
 
-    &__bg {
+    &__bg { // The dark overlay on the card
         background-color: rgba(0,0,0,0.5);
         transition: background-color 0.4s;
     }
 
-    &__block:hover &__bg {
+    &__block:hover &__bg { // Lighten overlay slightly on hover
         background-color: rgba(0,0,0,0.3);
     }
 }

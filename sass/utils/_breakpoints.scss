@@ -1,3 +1,4 @@
+// A mixin for the mobile breakpoint
 @mixin mobile-breakpoint() {
     @media screen and (max-width: 1000px) {
         @content;

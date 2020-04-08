@@ -1,20 +1,18 @@
 .cart {
     background-color: $dark;
     position: fixed;
-    top:0;
-    bottom:0;
-    right: 0;
-    width: 50%;
+    top: 0;bottom: 0;right: 0; // Fix the cart to the top, bottom and right of the screen
+    width: 50%; // Make cart span 1/2 screen on desktop
 	padding: 80px 40px;
 	transform: translateX(0);
-	transition: transform 0.6s;
+	transition: transform 0.6s; // Control the speed of the animation
 	z-index: 10;
 	@include mobile-breakpoint() {
-		width: 100%;
+		width: 100%; // Make the cart span the full screen on mobile
 	}
 
 	&--closed {
-		transform: translateX(100vw);
+		transform: translateX(100vw); // The cart when it's closed
 	}
 
     &__heading {
@@ -26,7 +24,7 @@
         font-size: 32px;
     }
 
-    &__close {
+    &__close { // The close "X" icon
         position: absolute;
         top: 20px;
         right: 20px;
@@ -37,41 +35,41 @@
         line-height: 1;
     }
 
-    &__item {
+    &__item { // A single product in the cart
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid #FFF;
 		margin: 0 0 10px 0;
 	}
 	
-	&__image {
+	&__image { // Image of product
 		width: 50px;
 		height: 50px;
 		object-fit: cover;
 	}
 
-	&__content {
+	&__content { // Text in cart
 		color: #FFF;
 		font-size: 24px;
 		display: flex;
 	}
 
-	&__content p {
+	&__content p { // Move the paragraphs in the cart across a little
 		padding: 0 10px;
 	}
 
-	&__remove-wrapper {
+	&__remove-wrapper { // The wrapper of the remove "X" button on an item
 		right: 20px;
 	}
 
-	&__remove {
+	&__remove { // The remove "X" button on an item
 		color: red;
 		font-size: 32px;
 		border: none;
 		background: none;
 	}
 
-    &__checkout {
+    &__checkout { // Checkout button
         position: absolute;
         bottom: 50px;
         margin: 0 auto;

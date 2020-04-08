@@ -5,9 +5,10 @@
     margin: 5px;
 
     @include mobile-breakpoint {
-        width: 100%;
+        width: 100%; // Make full width on mobile
     }
 
+    // Titles & Subtitle
     &__title {
         font-size: 36px;
         font-family: $font2;
@@ -22,27 +23,24 @@
         color: #FFF;
     }
 
+    // The menu table
     &__table {
         width: 100%;
         margin-top: 10px;
     }
-
     &__table-title {
         color: #FFF;
         font-weight: bold;
     }
-
     &__row {
         color: #FFF;
         font-family: $font2;
         justify-content: space-between;
         font-weight: lighter;
     }
-
     &__row td:last-child {
-        text-align: right;
+        text-align: right; // Makes the last cell (The price) go to the right
     }
-
     &__table-header {
         text-align: left;
         margin-top: 20px;
@@ -50,7 +48,7 @@
     }
 
 
-    &__button {
+    &__button { // The "View Full Menu" button
         width: 100%;
         padding: 15px;
         border: none;

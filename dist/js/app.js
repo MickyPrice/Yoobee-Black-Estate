@@ -17,13 +17,13 @@ window.onresize = _ => {
 // Set .aspect divs to have the same height as their width
 function fix_aspect_ratios () {
     var squares = document.getElementsByClassName("aspect");
-    for (const key in squares) {
+    for (const key in squares) { // Loop all elements with ".aspect" class
         if (squares.hasOwnProperty(key)) {
-            const element = squares[key];
-            if (window.innerWidth > 1000){
-                element.style.height = element.clientWidth + "px";
-            }else {
-                element.style.height = null;
+            const element = squares[key]; // Store element as "element"
+            if (window.innerWidth > 1000){ // If the width of the page is more than 1000px (Desktop)
+                element.style.height = element.clientWidth + "px"; // Set height to width of element
+            }else { // Browser less than 1000px (mobile)
+                element.style.height = null; // Reset the height
             }
         }
     }
@@ -35,11 +35,9 @@ function fix_aspect_ratios () {
 if (document.getElementById("booking-form")) {
     document.getElementById("booking-form").addEventListener('submit', e => {
         
-        var errors = [];
+        var errors = []; // Store errors in here later
 
         var inputs = document.querySelectorAll("#booking-form input");
-
-
         for (var key in inputs) { 
             if (inputs.hasOwnProperty(key)) {
                 const element = inputs[key];

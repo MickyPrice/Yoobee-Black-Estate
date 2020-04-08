@@ -1,5 +1,5 @@
 // Code for generating gallery photos on restaurant page
-
+// "Images" variable is an array with objects in it storing the url & alt tag of each image in the gallery
 var images = [
     {
         url: "./img/photography/restaurant/black_estate_winery_restaurant_photos_north_canterbury_waipara_0.jpg",
@@ -45,7 +45,7 @@ var images = [
 
 
 
-window.addEventListener('load', generateGallery("gallery__images"));
+window.addEventListener('load', generateGallery("gallery__images")); // When page loads, generate the gallery
 
 function generateGallery(elementId) {
     if(document.getElementById(elementId)) { // Check if element exists
@@ -55,8 +55,8 @@ function generateGallery(elementId) {
 
                 var a = document.createElement("a"); // Create the anchor element
                 a.href = element.url;
-                a.setAttribute('data-lightbox', "Restaurant Gallery");
-                a.setAttribute('data-title', element.alt);
+                a.setAttribute('data-lightbox', "Restaurant Gallery"); // Lightbox setting
+                a.setAttribute('data-title', element.alt); // Lightbox setting
                 a.classList.add("aspect");
                 a.classList.add("gallery__image-wrapper");
 
@@ -64,10 +64,10 @@ function generateGallery(elementId) {
                 img.src = element.url;
                 img.alt = element.alt;
                 img.classList.add("gallery__image");
-                img.classList.add("aspect");
-
-                a.appendChild(img);
-                document.getElementById(elementId).appendChild(a);
+                img.classList.add("aspect"); // Make each image square (Find aspect ration code in app.js)
+ 
+                a.appendChild(img); // Put image inside anchor
+                document.getElementById(elementId).appendChild(a); // Add image & anchor into gallery div
 
             }
         }

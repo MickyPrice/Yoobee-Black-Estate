@@ -1,7 +1,7 @@
 .header {
     padding: 10px 10px 0px 10px;
     
-    &__bg {
+    &__bg { // The actual background image
         background-position: center;
         background-size: cover;
         height: 500px;
@@ -11,7 +11,7 @@
         }
     }
 
-    &__darken_bg {
+    &__darken_bg { // The div that makes the background image darken
         display: none;
         padding: 100px 0;
         background-color: rgba(0,0,0,0.5);
@@ -21,7 +21,7 @@
         }
     }
 
-    &__title {
+    &__title { // The title in the header
         color: #FFF;
         font-size: 48px;
         font-weight: 300;

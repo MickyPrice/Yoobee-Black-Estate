@@ -11,11 +11,11 @@ function cartToggle() {
 }
 
 
-for (const key in document.getElementsByClassName('cart__remove')) {
+for (const key in document.getElementsByClassName('cart__remove')) { // Add listeners to cart remove buttons
     if (document.getElementsByClassName('cart__remove').hasOwnProperty(key)) {
         const element = document.getElementsByClassName('cart__remove')[key];
         element.addEventListener('click', _ => {
-            element.parentElement.parentElement.remove();
+            element.parentElement.parentElement.remove(); // Delete the cart item's row
         });
     }
 }

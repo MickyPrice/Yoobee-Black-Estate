@@ -9,6 +9,7 @@
         padding: 5px;
     }
 
+    // The below code puts the lines next to the title.
     &__title {
         line-height: 0.5;
         text-align: center;
@@ -62,9 +63,6 @@
         justify-content: start;
         flex-wrap: wrap;
     }
-
-
-
 
     &__image-wrapper {
         width: 20%;

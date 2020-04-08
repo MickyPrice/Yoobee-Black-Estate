@@ -1,28 +1,29 @@
-.sidebyside {
+.sidebyside { // Side by side code. See it on home page for example.
     display: flex;
     padding: 0 10px;
     @include mobile-breakpoint {
         flex-direction: column;
     }
 
-    &--mobile_flip {
+    &--mobile_flip { 
+        // This is a modifier that makes the row flipped on mobile (So you don't end up with text text or image image)
         @include mobile-breakpoint {
             flex-direction: column-reverse;
         }
     }
 
-    &__sec {
+    &__sec { // One of the sides
         width: 50%;
         @include mobile-breakpoint {
             width: auto;
         }
     }
 
-    &__text {
+    &__text { // Make the text have padding of 8% of vw top/bottom & 4% vw let/right
         padding: calc(100vw * 0.08) calc(100vw * 0.04);
     }
 
-    &__heading {
+    &__heading { // The titles on the side by side element
         font-size: 48px;
         font-family: $font2;
         font-weight: 300;
@@ -38,7 +39,7 @@
         margin-top: 10px;
     }
 
-    &__background {
+    &__background { // The image column
         background-position: center;
         background-size: cover;
         @include mobile-breakpoint {
